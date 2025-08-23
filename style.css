@@ -1,0 +1,168 @@
+:root {
+  --color-background-primary: #EEEFF1;
+  --color-background-secondary: #F9F9F9;
+  --color-background-accent: #34547A;
+  --color-text-primary: #000000;
+  --color-text-body: #727272;
+  --color-text-light: #ffffff;
+  --text-h1: 3rem;
+  --text-h2: 2rem;
+  --text-h3: 1.3rem;
+  --text-body: 1rem;
+  --text-caption: 0.8rem;
+  --text-title-weight: 500;
+  --text-body-weight: 400;
+  --text-gap: 50px;
+  --gap-sm: 20px;
+  --gap-lg: 50px;
+  --padding-section-t-b: 7rem;
+  --line-height: 164%;
+  --font-primary: 'Roboto', sans-serif;
+  --container-primary: 1110px;
+  --container-sm: 540px;
+  --gap-menu: 40px;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  line-height: var(--line-height);
+}
+
+
+.text-title {
+  color: var(--color-text-primary);
+  font-weight: var(--text-title-weight);
+  max-width: 540px;
+}
+
+.text__title--main {
+  font-size: var(--text-h1);
+}
+
+.text__title--secondary {
+  font-size: var(--text-h2);
+}
+
+.text__body {
+  font-size: var(--text-body);
+  font-weight: var(--text-body-weight);
+}
+
+.text__body--gray {
+  max-width: 540px;
+  color: var(--color-text-body);
+}
+
+.container {
+  width: min(100% - var(--gap-lg), var(--container-primary));
+  margin-inline: auto;
+}
+
+.container-sm {
+  width: min(100% - var(--gap-lg), var(--container-sm));
+  margin-inline: auto;
+}
+
+.menu {
+  background-color: var(--color-background-primary);
+}
+
+.menu-list {
+  padding: 2.5rem 0;
+  gap: var(--gap-menu);
+  display: flex;
+}
+
+a {
+  color: var(--color-text-primary);
+}
+
+section {
+  padding: var(--padding-section-t-b);
+}
+
+.content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  gap: var(--text-gap);
+}
+
+.content-wrap--left {
+  align-items: flex-start;
+}
+
+.content-wrap--center {
+  align-items: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+  padding: 20px 44px;
+  background-color: var(--color-background-accent);
+  color: var(--color-text-light);
+}
+
+
+.first-screen {
+  background-color: var(--color-background-primary);
+}
+
+.about-me {
+  background-color: var(--color-background-secondary);
+}
+
+.advantages {
+  background-color: var(--color-background-accent);
+}
+
+.advant-wrap-global {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-lg);
+  justify-content: center;
+
+}
+
+.advant__item {
+  display: flex;
+  gap: var(--gap-sm);
+  color: white;
+}
+
+.how-i-work {
+  background-color: var(--color-background-primary);
+  padding-bottom: 3.2rem;
+}
+
+.video {
+  background-color: var(--color-background-primary);
+  padding: 0;
+  padding-bottom: var(--padding-section-t-b);
+}
+
+.video__iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
+.footer {
+  display: flex;
+  background-color: var(--color-background-accent);
+  padding: calc(var(--padding-section-t-b)/3);
+  color: var(--color-text-light);
+}
