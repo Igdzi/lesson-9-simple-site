@@ -11,8 +11,8 @@
   --text-body: 1rem;
   --text-caption: 0.8rem;
   --text-title-weight: 500;
-  --text-body-weight: 400;
-  --text-gap: 50px;
+  --text-body-weight: regular;
+  --text-gap: 40px;
   --gap-sm: 20px;
   --gap-lg: 50px;
   --padding-section-t-b: 7rem;
@@ -21,6 +21,7 @@
   --container-primary: 1110px;
   --container-sm: 540px;
   --gap-menu: 40px;
+  --letter-spacing-sm: 0.1rem;
 }
 
 * {
@@ -33,32 +34,17 @@
 
 html {
   font-family: Roboto, sans-serif;
-  line-height: var(--line-height);
 }
 
-
-.text-title {
-  color: var(--color-text-primary);
+h1,
+h2,
+h3 {
   font-weight: var(--text-title-weight);
-  max-width: 540px;
 }
 
-.text__title--main {
-  font-size: var(--text-h1);
-}
-
-.text__title--secondary {
-  font-size: var(--text-h2);
-}
-
-.text__body {
-  font-size: var(--text-body);
+p {
+  line-height: var(--line-height);
   font-weight: var(--text-body-weight);
-}
-
-.text__body--gray {
-  max-width: 540px;
-  color: var(--color-text-body);
 }
 
 .container {
@@ -66,86 +52,151 @@ html {
   margin-inline: auto;
 }
 
-.container-sm {
+.container--sm {
   width: min(100% - var(--gap-lg), var(--container-sm));
   margin-inline: auto;
 }
 
-.menu {
+.header {
   background-color: var(--color-background-primary);
 }
 
-.menu-list {
+.header__menu {
   padding: 2.5rem 0;
   gap: var(--gap-menu);
   display: flex;
+  flex-wrap: wrap;
 }
 
-a {
+.header__link {
   color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-sm);
 }
 
-section {
+.header__link--active {
+  color: var(--color-background-accent);
+}
+
+
+
+.first-screen {
+  background-color: var(--color-background-primary);
   padding: var(--padding-section-t-b);
 }
 
-.content-wrap {
+.first-screen__content {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
   gap: var(--text-gap);
-}
-
-.content-wrap--left {
   align-items: flex-start;
 }
 
-.content-wrap--center {
-  align-items: flex-start;
-  align-items: center;
-  text-align: center;
+.first-screen__title {
+  line-height: var(--line-height);
+  color: var(--color-text-primary);
+  font-size: var(--text-h1);
+  max-width: 540px;
 }
 
-.btn {
+.first-screen__text {
+  font-size: var(--text-body);
+  color: var(--color-text-body);
+  max-width: 540px;
+}
+
+.first-screen__button {
   all: unset;
   cursor: pointer;
   padding: 20px 44px;
   background-color: var(--color-background-accent);
   color: var(--color-text-light);
+  letter-spacing: var(--letter-spacing-sm);
 }
 
 
-.first-screen {
-  background-color: var(--color-background-primary);
-}
-
-.about-me {
+.about {
   background-color: var(--color-background-secondary);
+  padding: var(--padding-section-t-b);
 }
+
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--text-gap);
+  align-items: center;
+  text-align: center;
+}
+
+.about__title {
+  color: var(--color-text-primary);
+  font-size: var(--text-h2);
+  max-width: 540px;
+}
+
+.about__text {
+  font-size: var(--text-body);
+  color: var(--color-text-body);
+  max-width: 540px;
+}
+
 
 .advantages {
   background-color: var(--color-background-accent);
+  padding: var(--padding-section-t-b);
 }
 
-.advant-wrap-global {
+.advantages__list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap-lg);
-  justify-content: center;
-
+  justify-content: space-between;
 }
 
-.advant__item {
+.advantages__item {
   display: flex;
   gap: var(--gap-sm);
-  color: white;
+  color: var(--color-text-light);
+
 }
 
-.how-i-work {
+.advantages__number {
+  font-size: var(--text-h3);
+}
+
+.advantages__description {
+  text-transform: lowercase;
+}
+
+
+.work {
   background-color: var(--color-background-primary);
+  padding: var(--padding-section-t-b);
   padding-bottom: 3.2rem;
 }
+
+.work__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--text-gap);
+  align-items: center;
+  text-align: center;
+}
+
+.work__title {
+  color: var(--color-text-primary);
+  font-size: var(--text-h2);
+  max-width: 540px;
+}
+
+.work__text {
+  font-size: var(--text-body);
+  color: var(--color-text-body);
+  max-width: 540px;
+}
+
 
 .video {
   background-color: var(--color-background-primary);
@@ -153,16 +204,21 @@ section {
   padding-bottom: var(--padding-section-t-b);
 }
 
-.video__iframe {
+.video__frame {
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
   display: block;
 }
 
+
 .footer {
   display: flex;
   background-color: var(--color-background-accent);
-  padding: calc(var(--padding-section-t-b)/3);
+  padding: calc(var(--padding-section-t-b)/2.5);
   color: var(--color-text-light);
+}
+
+.footer__name {
+  margin: 0 0 1.2rem 0;
 }
